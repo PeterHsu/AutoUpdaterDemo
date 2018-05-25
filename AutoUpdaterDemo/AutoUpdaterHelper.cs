@@ -84,7 +84,9 @@ namespace AutoUpdaterDemo
                             //#檔案不存在時會顯示錯誤對話盒, 但不用有Exception
                             if (AutoUpdater.DownloadUpdate())
                             {
+                                //#Console要改用Environment而不是Application
                                 Application.Exit();
+                                //Environment.Exit(0);
                             }
                         }
                         catch (Exception exception) //#有寫有保佑
